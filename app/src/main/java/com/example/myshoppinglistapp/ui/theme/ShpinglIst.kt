@@ -1,5 +1,7 @@
 package com.example.myshoppinglistapp.ui.theme
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -118,6 +120,8 @@ fun shopingListApp() {
                                        itemName = ""
                                        itemQuantity = ""
                                        showDialogue = false
+                                   }else{
+
                                    }
                                }) {
                                    Text(text = "Add")
@@ -175,7 +179,7 @@ fun shopingListItem(
             IconButton(onClick = { onEditClick }) {
                 Icon(imageVector = Icons.Default.Edit, contentDescription = "Edit button")
             }
-            IconButton(onClick = {onDeletClick}) {
+            IconButton(onClick = { onDeletClick}) {
                 Icon(imageVector = Icons.Default.Delete, contentDescription = "Delete button")
             }
 
@@ -205,7 +209,7 @@ fun shopingItemEditor(
         Column {
             BasicTextField(value = editedName,
                 //change form  onValueChage ={It} to editedName = it;
-                onValueChange = {editedName = it},
+                onValueChange = { it},
                 singleLine = true,
                 modifier = Modifier
                     .wrapContentSize()
@@ -215,7 +219,7 @@ fun shopingItemEditor(
 
             BasicTextField(value = editQuantity,
                 //change form  onValueChage ={It} to editQuantity = it;
-                onValueChange = {editQuantity = it},
+                onValueChange = { it},
                 singleLine = true,
                 modifier = Modifier
                     .wrapContentSize()
