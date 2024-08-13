@@ -67,4 +67,26 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
+    val nav_version = "2.7.7"
+    val lifecycle_version = "2.8.4"
+    val retfit_version = "2.9.0"
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    // ViewModel utilities for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    // retrofit dependencies
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+
+    //jsom to kotlin object mapping , retrofit convertor from http to gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    // image loading , coil extension
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
+    // googel map
+    implementation ("com.google.maps.android:maps-compose:6.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
+
 }
